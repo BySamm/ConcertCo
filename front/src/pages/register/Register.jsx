@@ -71,7 +71,7 @@ export default function Register() {
             <button className="loginButton" type="submit">
               Sign Up
             </button>
-            <Link to="/login">
+            <Link to="/login" className="registerAlign">
               <button className="loginRegisterButton">Log into Account</button>
             </Link>
           </form>

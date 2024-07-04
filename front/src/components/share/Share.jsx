@@ -51,11 +51,13 @@ export default function Share() {
             }
             alt=""
           />
+          <div className="shareInputField">
           <input
             placeholder={"What's in your mind " + user.username + "?"}
             className="shareInput"
             ref={desc}
           />
+          </div>
         </div>
         <hr className="shareHr" />
         {file && (

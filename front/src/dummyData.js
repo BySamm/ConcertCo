@@ -1,9 +1,9 @@
 export const Users = [
-  {
-    id:1,
-    profilePicture: "person/1.jpeg",
-    username: "Safak Kocaoglu",
-  },
+  // {
+  //   id:1,
+  //   profilePicture: "person/1.jpeg",
+  //   username: "Safak Kocaoglu",
+  // },
   {
     id:2,
     profilePicture: "person/2.jpeg",
@@ -29,11 +29,11 @@ export const Users = [
     profilePicture: "person/6.jpeg",
     username: "Shirley Beauchamp",
   },
-  {
-    id:7,
-    profilePicture: "person/7.jpeg",
-    username: "Travis Bennett",
-  },
+  // {
+  //   id:7,
+  //   profilePicture: "person/7.jpeg",
+  //   username: "Travis Bennett",
+  // },
   {
     id:8,
     profilePicture: "person/8.jpeg",
@@ -44,11 +44,11 @@ export const Users = [
     profilePicture: "person/9.jpeg",
     username: "Gary Duty",
   },
-  {
-    id:10,
-    profilePicture: "person/10.jpeg",
-    username: "Safak Kocaoglu",
-  },
+  // {
+  //   id:10,
+  //   profilePicture: "person/10.jpeg",
+  //   username: "Safak Kocaoglu",
+  // },
 ];
 
 export const Posts = [
