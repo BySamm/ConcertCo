@@ -1,0 +1,803 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  font-family: "Arial", sans-serif;
+  color: whitesmoke;
+  background-color: black;
+}
+
+a {
+  color: #47b2e4;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #73c5eb;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Arial", sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Home
+--------------------------------------------------------------*/
+.homeContainer{
+    display: flex;
+    width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Login
+--------------------------------------------------------------*/
+.login {
+    width: 100vw;
+    height: 100vh;
+    background-color: #f0f2f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .loginWrapper {
+    width: 70%;
+    height: 70%;
+    display: flex;
+  }
+  
+  .loginLeft,
+  .loginRight {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .loginLogo {
+    font-size: 50px;
+    font-weight: 800;
+    color: #1775ee;
+    margin-bottom: 10px;
+  }
+  
+  .loginDesc {
+    font-size: 24px;
+  }
+  
+  .loginBox{
+      height: 300px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+  
+  .loginInput{
+      height: 50px;
+      border-radius: 10px;
+      border: 1px solid gray;
+      font-size: 18px;
+      padding-left: 20px;
+  }
+  
+  .loginInput:focus{
+      outline: none;
+  }
+  
+  .loginButton{
+      height: 50px;
+      border-radius: 10px;
+      border: none;
+      background-color: #1775ee;
+      color: white;
+      font-size: 20px;
+      font-weight: 500;
+      cursor: pointer;
+  }
+  
+  .loginButton:focus{
+    outline: none;
+  }
+  
+  .loginButton:disabled{
+    cursor: not-allowed;
+  }
+  
+  .loginForgot{
+      text-align: center;
+      color: #1775ee;
+  }
+  
+  .loginRegisterButton{
+      width: 60%;
+      align-self: center;
+      height: 50px;
+      border-radius: 10px;
+      border: none;
+      background-color: #42b72a;
+      color: white;
+      font-size: 20px;
+      font-weight: 500;
+      cursor: pointer;
+  }
+
+
+/*--------------------------------------------------------------
+# Profile
+--------------------------------------------------------------*/
+.profile{
+    display: flex;
+}
+
+.profileRight{
+    flex: 9;
+}
+
+.profileCover{
+    height: 320px;
+    position: relative;
+}
+
+.profileCoverImg{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.profileUserImg{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 150px;
+    border: 3px solid white;
+}
+
+.profileInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profileInfoName{
+    font-size: 24px;
+}
+
+.profileInfoDesc{
+    font-weight: 300;
+}
+
+.profileRightBottom{
+    display: flex;
+}
+
+/*--------------------------------------------------------------
+# Register
+--------------------------------------------------------------*/
+.login {
+    width: 100vw;
+    height: 100vh;
+    background-color: #f0f2f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .loginWrapper {
+    width: 70%;
+    height: 70%;
+    display: flex;
+  }
+  
+  .loginLeft,
+  .loginRight {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .loginLogo {
+    font-size: 50px;
+    font-weight: 800;
+    color: #1775ee;
+    margin-bottom: 10px;
+  }
+  
+  .loginDesc {
+    font-size: 24px;
+  }
+  
+  .loginBox{
+      height: 400px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+  
+  .loginInput{
+      height: 50px;
+      border-radius: 10px;
+      border: 1px solid gray;
+      font-size: 18px;
+      padding-left: 20px;
+  }
+  
+  .loginInput:focus{
+      outline: none;
+  }
+  
+  .loginButton{
+      height: 50px;
+      border-radius: 10px;
+      border: none;
+      background-color: #1775ee;
+      color: white;
+      font-size: 20px;
+      font-weight: 500;
+      cursor: pointer;
+  }
+  
+  .loginForgot{
+      text-align: center;
+      color: #1775ee;
+  }
+  
+  .loginRegisterButton{
+      width: 60%;
+      align-self: center;
+      height: 50px;
+      border-radius: 10px;
+      border: none;
+      background-color: #42b72a;
+      color: white;
+      font-size: 20px;
+      font-weight: 500;
+      cursor: pointer;
+  }
+
+/*--------------------------------------------------------------
+# Close Friends
+--------------------------------------------------------------*/
+.sidebarFriend {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .sidebarFriendImg {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+
+
+/*--------------------------------------------------------------
+# Feeds
+--------------------------------------------------------------*/
+.feed{
+    flex:5.5
+}
+
+.feedWrapper{
+    padding: 20px;
+}
+
+
+/*--------------------------------------------------------------
+# Online
+--------------------------------------------------------------*/
+.rightbarFriend {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .rightbarProfileImgContainer {
+    margin-right: 10px;
+    position: relative;
+  }
+  
+  .rightbarProfileImg {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .rightbarOnline{
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: limegreen;
+      position: absolute;
+      top: -2px;
+      right: 0;
+      border: 2px solid white;
+  }
+  
+  .rightbarUsername{
+      font-weight: 500;
+  }
+
+
+/*--------------------------------------------------------------
+# Post
+--------------------------------------------------------------*/
+.post {
+    width: 100%;
+    border-radius: 8px;
+    -webkit-box-shadow: inset 0px 0px 12px 2px rgba(94,91,94,1);
+-moz-box-shadow: inset 0px 0px 12px 1px rgba(94,91,94,1);
+box-shadow: inset 0px 0px 12px 1px rgba(94,91,94,1);
+
+    /* -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+    box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68); */
+    margin: 30px 0;
+  }
+  
+  .postWrapper {
+    padding: 12px;
+  }
+  
+  .postTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .postTopLeft {
+    display: flex;
+    align-items: center;
+  }
+  
+  .postProfileImg {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .postUsername {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0 10px;
+  }
+  
+  .postDate{
+      font-size: 12px;
+  }
+  
+  .postCenter{
+      margin: 20px 0;
+  }
+  
+  .postImg{
+      margin-top: 20px;
+      width: 100%;
+      max-height: 500px;
+      object-fit: contain;
+  }
+  
+  .postBottom{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+  
+  .postBottomLeft{
+      display: flex;
+      align-items: center;   
+  }
+  
+  .likeIcon{
+      width: 24px;
+      height: 24px;
+      margin-right: 5px;
+      cursor: pointer;
+  }
+  
+  .postLikeCounter{
+      font-size: 15px;
+  }
+  
+  .postCommentText{
+      cursor: pointer;
+      border-bottom: 1px dashed gray;
+      font-size: 15px;
+  }
+
+
+/*--------------------------------------------------------------
+# Right Bar
+--------------------------------------------------------------*/
+.rightbar {
+    flex: 3.5;
+  }
+  
+  .rightbarWrapper {
+    padding: 20px 20px 0 0;
+  }
+  
+  .birthdayContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .birthdayImg {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .birthdayText {
+    font-weight: 300;
+    font-size: 15px;
+  }
+  
+  .rightbarAd {
+    width: 100%;
+    border-radius: 10px;
+    margin: 30px 0;
+  }
+  
+  .rightbarTitle{
+      margin-bottom: 20px;
+  }
+  
+  .rightbarFriendList {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .rightbarTitle{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  
+  .rightbarInfo{
+    margin-bottom: 30px;
+  }
+  
+  .rightbarInfoItem{
+    margin-bottom: 10px;
+  }
+  
+  .rightbarInfoKey{
+    font-weight: 500;
+    margin-right: 15px;
+    color: #555;
+  }
+  
+  .rightbarInfoValue{
+    font-weight: 300;
+  }
+  
+  .rightbarFollowings{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .rightbarFollowing{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  
+  .rightbarFollowingImg{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .rightbarFollowButton{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #1872f2;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .rightbarFollowButton:focus{
+    outline: none;
+  }
+
+
+/*--------------------------------------------------------------
+# Share
+--------------------------------------------------------------*/
+.share {
+    width: 100%;
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0px 0px 12px 2px rgba(94,91,94,1);
+    -moz-box-shadow: inset 0px 0px 12px 1px rgba(94,91,94,1);
+    box-shadow: inset 0px 0px 12px 1px rgba(94,91,94,1);
+    /* -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+    box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68); */
+  }
+  
+  .shareWrapper {
+    padding: 12px;
+  }
+  
+  .shareTop {
+    display: flex;
+    align-items: center;
+  }
+  
+  .shareProfileImg {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .shareInput {
+    border-radius: 5px;
+    width: 80%;
+    height: 20%;
+    background-color: #f1eded;
+    color: white;
+  }
+  
+  .shareInput:focus {
+    outline: none;
+  }
+  
+  .shareHr {
+    margin: 20px;
+  }
+  
+  .shareBottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .shareOptions{
+      display: flex;
+      margin-left: 20px;
+  }
+  
+  .shareOption{
+      display: flex;
+      align-items: center;
+      margin-right: 15px;
+      cursor: pointer;
+  }
+  
+  .shareIcon{
+      font-size: 18px;
+      margin-right: 3px;
+  }
+  
+  .shareOptionText{
+      font-size: 14px;
+      font-weight: 500;
+  }
+  
+  .shareButton{
+      border: none;
+      padding: 7px;
+      border-radius: 5px;
+      background-color: green;
+      font-weight: 500;
+      margin-right: 20px;
+      cursor: pointer;
+      color: white;
+  }
+  
+  .shareImgContainer{
+    padding: 0 20px 10px 20px;
+    position: relative;
+  }
+  
+  .shareImg{
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .shareCancelImg{
+    position: absolute;
+    top: 0;
+    right: 20px;
+    cursor: pointer;
+    opacity: 0.7;
+  }
+
+
+/*--------------------------------------------------------------
+# Side Bar
+--------------------------------------------------------------*/
+.sidebar {
+    flex: 3;
+    height: calc(100vh - 50px);
+    overflow-y: scroll;
+    position: sticky;
+    top: 50px;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: #3f3e3e;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(146, 143, 143);
+  }
+  
+  .sidebarWrapper {
+    padding: 20px;
+  }
+  
+  .sidebarList {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .sidebarListItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .sidebarIcon {
+    margin-right: 15px;
+  }
+  
+  .sidebarButton {
+    width: 150px;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 500;
+  }
+  
+  .sidebarHr {
+    margin: 20px 0;
+  }
+  
+  .sidebarFriendList {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  
+/*--------------------------------------------------------------
+# Top Bar
+--------------------------------------------------------------*/
+.topbarContainer {
+    height: 50px;
+    width: 100%;
+    background-color: #282828;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  
+  .topbarLeft {
+    flex: 3;
+  }
+  
+  .logo {
+    font-size: 24px;
+    margin-left: 20px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .topbarCenter {
+    flex: 5;
+  }
+  
+  .searchbar {
+    width: 100%;
+    height: 30px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .searchIcon {
+    font-size: 20px !important;
+    margin-left: 10px;
+  }
+  
+  .searchInput {
+    border: none;
+    width: 70%;
+  }
+  
+  .searchInput:focus {
+    outline: none;
+  }
+  
+  .topbarRight {
+    flex: 4;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+  }
+  
+  .topbarLink {
+    margin-right: 10px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .topbarIcons {
+    display: flex;
+  }
+  
+  .topbarIconItem {
+    margin-right: 15px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .topbarIconBadge {
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 50%;
+    color: white;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+  }
+  
+  .topbarImg {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+  }
+  
+
+
+
