@@ -3,7 +3,7 @@ import { loginCall } from "../../apiCalls";
 import { AuthContext } from "../../context/AuthContext";
 //import CircularProgress from '@mui/material/CircularProgress';
 import { useHistory } from "react-router";
-//import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 export default function Login() {
@@ -27,9 +27,9 @@ export default function Login() {
     <div className="login">
       <div className="loginWrapper">
         <div className="loginLeft">
-          <h3 className="loginLogo">ConcertCo</h3>
+          <h3 className="loginLogo">Concert Connect</h3>
           <span className="loginDesc">
-            Where concert connects and happiness resonate.
+          Where concerts unite and memories resonate
           </span>
         </div>
         <div className="loginRight">
@@ -59,6 +59,7 @@ export default function Login() {
             </button>
             <span className="loginForgot">Forgot Password?</span>
             
+              <Link to='/register' className="registerAlign">
               <button className="loginRegisterButton">
                 {/* {isFetching ? (
                   <CircularProgress color="white" size="20px" />
@@ -67,6 +68,7 @@ export default function Login() {
                 )} */}
                 Create a New Account
               </button>
+              </Link>
             
           </form>
         </div>

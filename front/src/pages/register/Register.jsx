@@ -33,9 +33,9 @@ export default function Register() {
     <div className="login">
       <div className="loginWrapper">
         <div className="loginLeft">
-          <h3 className="loginLogo">ConcertCo</h3>
+          <h3 className="loginLogo">Concert Connect</h3>
           <span className="loginDesc">
-            Where concerts connect and happiness resonate.
+          Where concerts unite and memories resonate
           </span>
         </div>
         <div className="loginRight">

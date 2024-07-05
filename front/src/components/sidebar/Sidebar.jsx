@@ -21,7 +21,7 @@ export default function Sidebar() {
             <RssFeed className="sidebarIcon" />
             <span className="sidebarListItemText">Feed</span>
           </li>
-          <Link to={`/messenger/${user.username}`}>
+          <Link to={`/messenger/${user.username}`} className='noLink'>
           <li className="sidebarListItem">
             <Chat className="sidebarIcon" />
             <span className="sidebarListItemText">Chats</span>
