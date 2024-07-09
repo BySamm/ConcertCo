@@ -738,6 +738,13 @@ box-shadow: inset 0px 0px 12px 1px rgba(94,91,94,1);
     text-decoration: none;
     color: inherit;
   }
+
+  .community {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    text-decoration: none;
+  }
   
   
 /*--------------------------------------------------------------

@@ -1,11 +1,19 @@
-import { Search, Person, Chat, Notifications } from "@mui/icons-material";
+import { Search, Person, Chat } from "@mui/icons-material";
+import LockIcon from '@mui/icons-material/Lock';
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 
+
 export default function Topbar() {
-  const { user } = useContext(AuthContext);
+  const { user, dispatch } = useContext(AuthContext);
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+
+  const handleLogout = () => {
+    dispatch({ type: "LOGOUT" });
+    localStorage.removeItem("user");
+  };
+
   return (
     <div className="topbarContainer">
       <div className="topbarLeft">
@@ -36,10 +44,10 @@ export default function Topbar() {
             <Chat />
             <span className="topbarIconBadge">2</span>
           </div>
-          <div className="topbarIconItem">
+          {/* <div className="topbarIconItem">
             <Notifications />
             <span className="topbarIconBadge">1</span>
-          </div>
+          </div> */}
         </div>
         <Link to={`/profile/${user.username}`}>
           <img
@@ -52,6 +60,12 @@ export default function Topbar() {
             className="topbarImg"
           />
         </Link>
+        <div className="topbarIconItem">
+          <button onClick={handleLogout} style={{ background: "none", color: "white", border: "none", cursor: "pointer" }}>
+            <LockIcon />
+          </button>
+            <span className=""></span>
+          </div>
       </div>
     </div>
   );

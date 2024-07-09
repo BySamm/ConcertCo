@@ -99,6 +99,8 @@ export default function Messenger() {
     scrollRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
+  console.log('Online users are' , onlineUsers)
+
   return (
     <>
       <Topbar />

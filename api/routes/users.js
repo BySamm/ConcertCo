@@ -40,20 +40,113 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
-//get a user
+// //get a user
+// router.get("/", async (req, res) => {
+//   const userId = req.query.userId;
+//   const username = req.query.username;
+
+//   console.log(`Query parameters - userId: ${userId}, username: ${username}`);
+
+//   try {
+//     const user = userId
+//       ? await User.findById(userId)
+//       : await User.findOne({ username: username });
+
+//     //const user = await User.findById(req.params.id)
+    
+//     if (!user) {
+//        return res.status(404).json({ message: "User not found" });
+//      }
+
+//     console.log(`User found: ${user}`);
+//     const { password, updatedAt, ...other } = user._doc;
+//     res.status(200).json(other);
+//   } catch (err) {
+//     console.error(`Error fetching user: ${err.message}`);
+//     res.status(500).json(
+//       {
+//         message: err.message,
+//         stack: err.stack,
+//         name: err.name
+//       }
+//     );
+//   }
+// });
+
+
+//get all users
 router.get("/", async (req, res) => {
   const userId = req.query.userId;
   const username = req.query.username;
+
+  console.log(`Query parameters - userId: ${userId}, username: ${username}`);
+
+  if (userId || username) {
+    // Existing logic for getting a single user
+    try {
+      const user = userId
+        ? await User.findById(userId)
+        : await User.findOne({ username: username });
+
+      if (!user) {
+        return res.status(404).json({ message: "User not found" });
+      }
+
+      console.log(`User found: ${user}`);
+      const { password, updatedAt, ...other } = user._doc;
+      res.status(200).json(other);
+    } catch (err) {
+      console.error(`Error fetching user: ${err.message}`);
+      res.status(500).json({
+        message: err.message,
+        stack: err.stack,
+        name: err.name
+      });
+    }
+  } else {
+    // New logic for getting all users
+    try {
+      const users = await User.find();
+      res.status(200).json(users);
+    } catch (err) {
+      console.error(`Error fetching users: ${err.message}`);
+      res.status(500).json({
+        message: err.message,
+        stack: err.stack,
+        name: err.name
+      });
+    }
+  }
+});
+
+
+
+//get a user by ID
+router.get("/:id", async (req, res) => {
+  const userId = req.params.id;
+
   try {
-    const user = userId
-      ? await User.findById(userId)
-      : await User.findOne({ username: username });
+    const user = await User.findById(userId);
+    
+    if (!user) {
+       return res.status(404).json({ message: "User not found" });
+     }
+
     const { password, updatedAt, ...other } = user._doc;
     res.status(200).json(other);
   } catch (err) {
-    res.status(500).json(err);
+    console.error(`Error fetching user: ${err.message}`);
+    res.status(500).json(
+      {
+        message: err.message,
+        stack: err.stack,
+        name: err.name
+      }
+    );
   }
 });
+
+
 
 //get friends
 router.get("/friends/:userId", async (req, res) => {

@@ -5,14 +5,33 @@ import {
   HelpOutline,
   Event,
 } from "@mui/icons-material";
-import { Users } from "../../dummyData";
-import CloseFans from "../closeFans/CloseFans";
+import axios from "axios";
+import CloseFans from "../community/Community";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../context/AuthContext";
 
 export default function Sidebar() {
   const { user } = useContext(AuthContext);
+  const [allUsers, setAllUsers] = useState([]);
+  const { user: currentUser } = useContext(AuthContext);
+
+  // useEffect for all users
+  useEffect(() => {
+    const fetchUsers = async () => {
+      try {
+        const response = await axios.get("/users");
+        const users = response.data.filter(u => u._id !== currentUser._id);
+        setAllUsers(users);
+        console.log('Users:', users)
+      } catch (error) {
+        console.error('Error fetching users:', error);
+      }
+    };
+
+    fetchUsers();
+  }, [currentUser]);
+
   return (
     <div className="sidebar">
       <div className="sidebarWrapper">
@@ -45,8 +64,9 @@ export default function Sidebar() {
         </ul>
         <button className="sidebarButton">Show More</button>
         <hr className="sidebarHr" />
+        <h3 className="community">Community</h3>
         <ul className="sidebarFriendList">
-          {Users.map((u) => (
+          {allUsers.map((u) => (
             <CloseFans key={u.id} user={u} />
           ))}
         </ul>
