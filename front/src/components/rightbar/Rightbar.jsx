@@ -59,15 +59,22 @@ export default function Rightbar({ user }) {
 
   const handleClick = async () => {
     try {
+      
+      const config = {
+        headers: {
+          Authorization: `Bearer ${currentUser.token}`,
+        },
+      };
+
       if (followed) {
         await axios.put(`/users/${user._id}/unfollow`, {
           userId: currentUser._id,
-        });
+        }, config);
         dispatch({ type: "UNFOLLOW", payload: user._id });
       } else {
         await axios.put(`/users/${user._id}/follow`, {
           userId: currentUser._id,
-        });
+        }, config);
         dispatch({ type: "FOLLOW", payload: user._id });
       }
       setFollowed(!followed);
