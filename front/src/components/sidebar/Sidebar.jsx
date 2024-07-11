@@ -67,7 +67,9 @@ export default function Sidebar() {
         <h3 className="community">Community</h3>
         <ul className="sidebarFriendList">
           {allUsers.map((u) => (
-            <CloseFans key={u.id} user={u} />
+            <Link key={u._id} to={`/profile/${u.username}`} className="noLink">
+              <CloseFans user={u} />
+            </Link>
           ))}
         </ul>
       </div>
